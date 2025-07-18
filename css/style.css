@@ -1,0 +1,140 @@
+:root {
+  --primary: #333;
+  --secondary: #f4f4f4;
+  --accent: #369fe0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--secondary);
+  color: var(--primary);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0 2rem;
+  border-bottom: 1px solid #ccc;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.logo img {
+  border-radius: 50%;
+}
+
+.welcome-section {
+  padding: 2rem;
+  text-align: left;
+  background: #fff;
+  margin-bottom: 1rem;
+}
+.banner img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+}
+.company-about {
+  margin: 2rem 0;
+}
+
+.headquarter {
+  background: #fff;
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+}
+.office-locations {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.office {
+  text-align: center;
+}
+.office-circle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+}
+
+.message-us {
+  background: #fff;
+  padding: 2rem 1rem;
+}
+#message-form {
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+#message-form,label, input, textarea {
+  display: block;
+  width: 100%;
+}
+#message-form input,
+#message-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+#message-form button {
+  display: block;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#message-result {
+  margin-top: 1rem;
+  background: #e9f6ff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+footer {
+  background: #eee;
+  padding: 0.8rem;
+  text-align: right;
+  font-size: 0.95em;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
+  }
+  .office-locations {
+    flex-direction: column;
+    align-items: center;
+  }
+  .welcome-section,
+  .message-us,
+  .headquarter {
+    padding: 1rem;
+  }
+}
